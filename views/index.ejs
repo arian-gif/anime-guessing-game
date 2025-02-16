@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Guesser</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>Score:<%=points%></header>
+    <h1>TAKE A GUESS</h1>
+
+    <image id="random-image" src=<%=image%>>
+    <div class="container">
+        <form name = "guess" id = "form1" action="/check" method="POST"> 
+            <input type="text"placeholder="Guess the anime!" name = "anime_guess">
+            <input type ="submit" value ="Submit">
+        </form>
+        
+        
+    </div>
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Anime Guesser. All rights reserved.</p>
+        <p>Made by Arian</p>
+    </footer>
+</body>
+
+</html>

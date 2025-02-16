@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Guesser</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <header>Score:<%=points%></header>
+    <% if (locals.anime_guess) { %>
+        <% if (locals.anime_guess.toLowerCase() === anime_title.toLowerCase()) { %>
+            <img id="random-image" src="<%= image %>" alt="Anime Image">
+            <h2>You got it right! 🎉</h2>
+        <% } else { %>
+            <img id="random-image" src="<%= image %>" alt="Anime Image">
+            <h2>You got it wrong! Try again. 😔</h2>
+            <h2>Correct answer is <%=anime_title  %></h2>
+        <% } %>
+    <% } %>
+
+    <div class="button-container">
+        <form action="/quit" method="get">
+            <button type="submit" class="quit-button">Quit</button>
+        </form>    
+        <form action="/game" method="get">
+            <button type="submit" class="play-button">Keep Playing</button>
+        </form>
+    </div>
+    
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Anime Guesser. All rights reserved.</p>
+        <p>Made by Arian</p>
+    </footer>
+</body>
+
+</html>
